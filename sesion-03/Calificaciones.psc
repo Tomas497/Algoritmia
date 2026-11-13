@@ -1,39 +1,32 @@
 Algoritmo Calificaciones
-		Definir contador, ganaron Como Entero
-		Definir calificacion, acumulado, max, men Como Real
-		Definir reprobados Como Logico
-		
-		acumulado <- 0
-		ganaron <- 0
-		max <- 0
-		men <- 5
-		reprobados <- Falso
-		
-		Para contador <- 1 Hasta 5 Hacer
-			Escribir "Ingrese la nota ", contador, ":"
-			Leer calificacion
-			acumulado <- acumulado + calificacion
-			
-			Si calificacion >= 3 Entonces
-				ganaron <- ganaron + 1
-			SiNo
-				reprobados <- Verdadero
-			FinSi
-			
-			Si calificacion > max Entonces
-				max <- calificacion
-			FinSi
-			
-			Si calificacion < men Entonces
-				men <- calificacion
-			FinSi
-		FinPara
-		
-		Escribir "Promedio: ", acumulado / 5
-		Escribir "Ganaron: ", ganaron
-		Escribir "Nota mas alta: ", max, " y nota mas baja: ", men
-		
-		Si reprobados Entonces
-			Escribir "Hay estudiantes en refuerzo"
+	Definir i, aprobados Como Entero
+	Definir nota, suma, mayor, menor Como Real
+	Definir alguienPerdio Como Logico
+	suma <- 0
+	aprobados <- 0
+	mayor <- 0
+	menor <- 5
+	alguienPerdio <- Falso
+	Para i <- 1 Hasta 5 Hacer
+		Escribir "Nota del estudiante ", i, ":"
+		Leer nota
+		suma <- suma + nota
+		Si nota >= 3 Entonces
+			aprobados <- aprobados + 1
+		SiNo
+			alguienPerdio <- Verdadero
 		FinSi
+		Si nota > mayor Entonces
+			mayor <- nota
+		FinSi
+		Si nota < menor Entonces
+			menor <- nota
+		FinSi
+	FinPara
+	Escribir "Promedio: ", suma / 5
+	Escribir "Aprobados: ", aprobados
+	Escribir "Nota más alta: ", mayor, " y más baja: ", menor
+	Si alguienPerdio Entonces
+		Escribir "Hay estudiantes en refuerzo"
+	FinSi
 FinAlgoritmo

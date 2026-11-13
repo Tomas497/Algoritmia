@@ -1,12 +1,11 @@
 Algoritmo Bisiesto
-	Definir año Como Entero
-	EScribir "Ingrese el año"
-	Leer año
-	
-	Si (año MOD 4 = 0 & año MOD 100 <> 0) O (año MOD 400 = 0 & año MOD 100 <> 0) Entonces
-		Escribir "El año ", año, " es bisiesto."
+	Definir anio Como Entero
+	Escribir "Ingresa un aÃ±o:"
+	Leer anio
+	// Divisible entre 4 Y no entre 100, O divisible entre 400
+	Si (anio MOD 4 = 0 Y anio MOD 100 <> 0) O anio MOD 400 = 0 Entonces
+		Escribir anio, " es bisiesto"
 	SiNo
-		Escribir "El año ", año, " no es bisiesto."
-	Fin Si
-	
+		Escribir anio, " no es bisiesto"
+	FinSi
 FinAlgoritmo

@@ -1,24 +1,18 @@
 Algoritmo Semaforo
 	Definir unidades Como Entero
-	EScribir "Ingrese las unidades"
-	leer unidades
-	
-Si unidades < 0 Entonces
-	Escribir "Invalido"
-SiNo
-	Si unidades = 0 Entonces
-		Escribir "Rojo: Agotado"
+	Escribir "Unidades en inventario:"
+	Leer unidades
+	Si unidades < 0 Entonces
+		Escribir "ERROR: las unidades no pueden ser negativas"
 	SiNo
 		Si unidades = 0 Entonces
-			Escribir "Rojo: Agotado"
+			Escribir "ROJO: agotado"
 		SiNo
-			si unidades > 1 & unidades < 10 Entonces
-				Escribir "Amarillo: Pedir"
+			Si unidades <= 10 Entonces
+				Escribir "AMARILLO: pedir"
 			SiNo
-				Escribir "Verde: Todo bien"
+				Escribir "VERDE: todo bien"
 			FinSi
 		FinSi
-	FinSi	
-FinSi
-
+	FinSi
 FinAlgoritmo
